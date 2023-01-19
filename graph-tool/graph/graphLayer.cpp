@@ -25,11 +25,9 @@ void GraphLayer::onUpdate(sf::Time frameTime)
 
 }
 
-void GraphLayer::onRender(std::shared_ptr<sf::RenderWindow> window, const RenderZone& zone)
+void GraphLayer::onRender(std::shared_ptr<sf::RenderWindow> window, sf::View& view)
 {
-	auto windowSize = window->getSize();
-	sf::RectangleShape zoneRect({ zone.width, zone.height });
-	zoneRect.move({ window->getSize().x - zone.width, 0 });
+	sf::RectangleShape zoneRect(view.getSize());
 
 	window->draw(zoneRect);
 }

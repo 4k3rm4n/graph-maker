@@ -20,7 +20,7 @@ struct ApplicationDescription
 struct LayerDescription
 {
 	Layer* layer;
-	RenderZone renderZone;
+	sf::View view;
 };
 
 

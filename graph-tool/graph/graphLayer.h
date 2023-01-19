@@ -12,6 +12,6 @@ public:
 	virtual void onDetach() override;
 
 	virtual void onUpdate(sf::Time frameTime) override;
-	virtual void onRender(std::shared_ptr<sf::RenderWindow> window, const RenderZone& zone) override;
+	virtual void onRender(std::shared_ptr<sf::RenderWindow> window, sf::View& view) override;
 	virtual void onEvent(const sf::Event& event) override;
 };

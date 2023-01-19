@@ -25,9 +25,9 @@ void InputLayer::onUpdate(sf::Time frameTime)
 
 }
 
-void InputLayer::onRender(std::shared_ptr<sf::RenderWindow> window, const RenderZone& zone)
+void InputLayer::onRender(std::shared_ptr<sf::RenderWindow> window, sf::View& view)
 {
-	sf::RectangleShape zoneRect({ zone.width, zone.height });
+	sf::RectangleShape zoneRect(view.getSize());
 	zoneRect.setFillColor(sf::Color::Black);
 
 	window->draw(zoneRect);
